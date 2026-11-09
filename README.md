@@ -103,4 +103,4 @@ adaudit analyze examples/sample_meta_export.csv --json
 ---
 
 ## License
-MIT © [Imam Haider (@darhaiderimam)](https://github.com/darhaiderimam)
+MIT © [Imam Haider (@darhaiderimam)](https://github.com/darhaiderimam) • [LinkedIn](https://www.linkedin.com/in/darhaiderimam)
