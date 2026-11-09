@@ -10,9 +10,9 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [
-    { name = "Haider (@darimamhaider)", email = "haider@example.com" }
+    { name = "Imam Haider", email = "295730094+darhaiderimam@users.noreply.github.com" }
 ]
-urls = { Homepage = "https://github.com/darimamhaider/adaudit", Repository = "https://github.com/darimamhaider/adaudit.git" }
+urls = { Homepage = "https://github.com/darhaiderimam/adaudit", Repository = "https://github.com/darhaiderimam/adaudit.git" }
 keywords = [
     "meta-ads",
     "google-ads",

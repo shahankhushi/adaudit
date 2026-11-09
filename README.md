@@ -2,7 +2,6 @@
 
 > **Zero-login ad account auditor that runs on CSV exports. Drop in a Meta or Google Ads export and get back wasted spend, creative fatigue, and a prioritized fix list in 5 seconds.**
 
-[![PyPI version](https://img.shields.io/badge/pypi-v1.0.0-blue.svg)](https://pypi.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Zero OAuth](https://img.shields.io/badge/OAuth-None%20Required-brightgreen.svg)](#)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
@@ -11,30 +10,35 @@
 
 ## The Problem: The Credentials Wall
 
-Every performance marketing tool wants OAuth access, full admin rights, or live API tokens before doing anything. 
+Most performance marketing SaaS platforms demand OAuth access, admin permissions, or live API credentials before doing anything. 
 
-According to EMARKETER research, **52% of marketers do not control their company's API access**, and enterprise security teams take months to approve ad account permissions. Meanwhile, every media buyer and agency strategist has an ad export CSV sitting on their desktop right now.
+In agency and multi-client environments, clients are often hesitant to grant third-party apps direct access to their ad accounts, and enterprise security approvals can take weeks. Meanwhile, media buyers and strategists have ad account CSV exports sitting on their desktop.
 
-`adaudit` has **no login, no OAuth, and no API keys**. You run it locally on your export. Your client's financial data never leaves your computer.
+`adaudit` has **no login, no OAuth, and no API keys**. It parses standard CSV exports locally in your terminal. Your client's financial and ad account data never leaves your computer.
 
 ---
 
 ## 5-Second Quickstart
 
-### 1. Install
+### 1. Install from Source
 ```bash
-pip install adaudit
+git clone https://github.com/darhaiderimam/adaudit.git
+cd adaudit
+pip install .
 ```
 
 ### 2. Run Audit
 ```bash
-adaudit analyze meta-export.csv --target-cpa 30
+adaudit analyze examples/sample_meta_export.csv --target-cpa 30
 ```
+*(Or run directly without installation: `python -m adaudit.cli analyze examples/sample_meta_export.csv --target-cpa 30`)*
 
-### 3. Instant Terminal Output
+### 3. Instant Terminal Output *(Synthetic Sample Data)*
 
 ```markdown
 # adaudit — Ad Account Audit Report
+*(Synthetic sample demonstration output)*
+
 **Account Health Score:** `62/100` | **Total Analyzed Spend:** `$22,800.00`
 
 > **IMMEDIATE RECOVERABLE CASH:** `$4,950.00` (21.7% of total spend)
@@ -75,7 +79,7 @@ adaudit analyze meta-export.csv --target-cpa 30
 
 ## What `adaudit` Detects
 
-1. **Zero-Conversion Wasted Spend:** Identifies ads and ad sets that have burned $>2\times$ the target CPA without generating a single customer.
+1. **Zero-Conversion Wasted Spend:** Identifies ads and ad sets that have spent $>2\times$ the target CPA without generating a single customer.
 2. **Creative Fatigue Decay:** Flags ads where frequency exceeds 3.2 and CTR has decayed below 1.0%, indicating audience burnout.
 3. **High-CPA Bleeders:** Detects campaigns generating purchases at $>1.5\times$ target CPA, eroding contribution margin.
 4. **Scale Candidates:** Isolates winning assets with CPA $<0.85\times$ target benchmark ready for budget expansion.
@@ -93,10 +97,10 @@ adaudit analyze meta-export.csv --target-cpa 30
 ## Machine-Readable Output (JSON)
 For automated agent workflows:
 ```bash
-adaudit analyze meta-export.csv --json
+adaudit analyze examples/sample_meta_export.csv --json
 ```
 
 ---
 
 ## License
-MIT © [Haider (@darimamhaider)](https://github.com/darimamhaider)
+MIT © [Imam Haider (@darhaiderimam)](https://github.com/darhaiderimam)
