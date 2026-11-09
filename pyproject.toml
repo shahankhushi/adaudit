@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaudit"
+version = "1.0.0"
+description = "Zero-login ad account auditor that runs directly on Meta and Google Ads CSV exports."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Haider (@darimamhaider)", email = "haider@example.com" }
+]
+urls = { Homepage = "https://github.com/darimamhaider/adaudit", Repository = "https://github.com/darimamhaider/adaudit.git" }
+keywords = [
+    "meta-ads",
+    "google-ads",
+    "ad-audit",
+    "wasted-spend",
+    "creative-fatigue",
+    "performance-marketing"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Office/Business :: Financial :: Accounting"
+]
+
+[project.scripts]
+adaudit = "adaudit.cli:main"
