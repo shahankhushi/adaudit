@@ -22,7 +22,7 @@ In agency and multi-client environments, clients are often hesitant to grant thi
 
 ### 1. Install from Source
 ```bash
-git clone https://github.com/darhaiderimam/adaudit.git
+git clone https://github.com/shahankhushi/adaudit.git
 cd adaudit
 pip install .
 ```
@@ -103,4 +103,4 @@ adaudit analyze examples/sample_meta_export.csv --json
 ---
 
 ## License
-MIT © [Imam Haider (@darhaiderimam)](https://github.com/darhaiderimam) • [LinkedIn](https://www.linkedin.com/in/darhaiderimam)
+MIT © [Shahaan Khushi (@shahankhushi)](https://github.com/shahankhushi)
